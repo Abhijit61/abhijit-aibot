@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
+.App{
+  display: flex;
+  flex-direction: row;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (max-width : 768px){
+  .App{
+    display: flex;
+    flex-direction: column;
+    background-color: lightpink;
+  }
+}
+.sidepanel{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  gap: 5px;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.mobilenavigator{
+  display: none;
+}
+
+@media (max-width : 768px) {
+  .sidepanel{
+    display: none;
+  }
+  .mobilenavigator{
+    display: block;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.newchatbutton{
+  width: 100%;
+}
+
+.pastchatbutton{
+  width: 80%;
+}
+
+.chatdiv{
+  background-color: lightpink;
+  width: 80%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.chatdiv2{
+  background-color: lightpink;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2px;
+}
+
+.titlediv{
+  height: 30vh;
+}
+
+.predefined_messages_grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2.1fr);
+  gap: 10px;
+}
+
+@media(max-width : 768px) {
+  .predefined_messages_grid{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.predefinedmessage{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatpanel{
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 5px;
+  position: fixed;
+  bottom: 8px;
+}
+
+.inputquestion{
+  width: 70%;
+}
+
+.askbutton{
+  width: 10%;
+}
+
+.savebutton{
+  width: 10%;
+}
+
+.mymessage {
+  background-color: white;
+  color: black;
+
+}
+.aimessage {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.aimessage:hover .Rating_Feedback{
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.Rating_Feedback{
+  display: none;
+}
+
+.chatdiv3{
+  background-color: lightpink;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+@media(max-width : 768px) {
+  .chatdiv3{
+    background-color: lightpink;
+    display: flex;
+    flex-direction: column;
   }
 }
+
+.chats{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px;
+}
+
+
+
